@@ -1,6 +1,7 @@
-package com.example;
+package javaprogrammingcourse;
 
 import java.io.*;
+import java.text.ParseException;
 import java.util.*;
 import org.json.simple.*;
 import org.json.simple.parser.*;
@@ -62,26 +63,30 @@ public class BirthdayExample {
      * if students do not know or understand what a "path" is, students should first complete the
      * extra credit module on Files, Directories, and Folders in Canvas.
      */
-    String pathToFile =
-      "C:/Users/jerom/Documents/GitHub/class-java/birthday-lupita-lookup-app/lupita/src/main/java/com/example/birthdayOnlyForTesting.json";
+    String pathToFile = "C:\\Users\\816re\\OneDrive\\Documents\\GitHub\\BirthdayLookupRepository\\main\\java\\birthdayOnlyForTesting.json";
 
     // students should change the code below in order to implment their own solution
 
     // initialize the hash map
     initializeMap(pathToFile);
-
-    // read user input from keyboard
-    System.out.println("Reading user input into a string");
-
     // get user input
     Scanner input = new Scanner(System.in);
     System.out.print("Enter a name:");
     String name = input.nextLine();
+    // close the scanner
+    input.close();
+
+    //look up the name in the hash map and print the birthday
+    if (birthdayMap.containsKey(name)) {
+      System.out.println("The birthday of " + name + " is " + birthdayMap.get(name));
+    } else {
+      System.out.println("Sorry, I don't have the birthday of " + name);
+    }
 
     // print user input
     System.out.println("name = " + name);
-
-    // close the scanner
-    input.close();
+    // read user input from keyboard
+    System.out.println("Reading user input into a string");
+    
   }
 }
