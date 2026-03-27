@@ -1,7 +1,6 @@
 package javaprogrammingcourse;
 
 import java.io.*;
-import java.text.ParseException;
 import java.util.*;
 import org.json.simple.*;
 import org.json.simple.parser.*;
@@ -28,7 +27,7 @@ public class BirthdayExample {
       e.printStackTrace();
     } catch (IOException e) {
       e.printStackTrace();
-    } catch (ParseException e) {
+    } catch (org.json.simple.parser.ParseException e) {
       e.printStackTrace();
     }
 
@@ -51,9 +50,6 @@ public class BirthdayExample {
       // add the name and birthday in to a hashmap
       birthdayMap.put(name, birthday);
 
-      // print the names and birthdays
-      System.out.println("name = " + name);
-      System.out.println("birthday = " + birthday);
     }
   }
 
@@ -63,7 +59,7 @@ public class BirthdayExample {
      * if students do not know or understand what a "path" is, students should first complete the
      * extra credit module on Files, Directories, and Folders in Canvas.
      */
-    String pathToFile = "C:\\Users\\816re\\OneDrive\\Documents\\GitHub\\BirthdayLookupRepository\\main\\java\\birthdayOnlyForTesting.json";
+    String pathToFile = "C:\\Users\\816re\\OneDrive\\Desktop\\SJCC\\Java\\GitHub\\BirthdayLookupRepository\\BirthdayLookup\\src\\main\\resources\\birthday.json";
 
     // students should change the code below in order to implment their own solution
 
